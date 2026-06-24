@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject GamePlayScreen;
     public GameObject OptionsScrren;
 
+   
+    
+
     private void Awake()
     {
         instance = this;
