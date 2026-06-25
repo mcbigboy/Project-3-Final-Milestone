@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class FollowShip : MonoBehaviour
-       
+
 {
 
     public GameObject followShip;
@@ -11,7 +11,7 @@ public class FollowShip : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,10 +29,24 @@ public class FollowShip : MonoBehaviour
 
         // Look way over Yonder 
         Vector3 lookPosition = followShip.transform.position + shipToOffest;
-    
+
         // Look from here 
         transform.position = lookPosition;
         transform.LookAt(followShip.transform.position, Vector3.up);
+
+    }
+
+    public void MoveCamera(float moveCameraInput)
+    {
+        if (moveCameraInput > 0) 
+        {
+            lineSight++;
+        }
+
+        if(moveCameraInput < 0)
+        {
+            lineSight--;
+        }
 
     }
 }

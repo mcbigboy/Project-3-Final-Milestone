@@ -768,7 +768,41 @@ MonoBehaviour:
       m_Action: Yaw
       m_Flags: 8
     m_Flags: 0
+  moveCamera:
+    m_Name: MoveCamera
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 21815ef3-6087-4cc0-ab9f-5fd32b1b1164
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: 82cfa934-603e-4fe5-8d59-bb8395254632
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MoveCamera
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 041ce64c-7be5-41fa-ac1f-48189207432b
+      m_Path: <Keyboard>/o
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MoveCamera
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: f5ae84b4-ecbe-4956-8637-e729ae7286b3
+      m_Path: <Keyboard>/l
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MoveCamera
+      m_Flags: 8
+    m_Flags: 0
   pawn: {fileID: 252064417}
+  followship: {fileID: 963194229}
 --- !u!114 &252064417
 MonoBehaviour:
   m_ObjectHideFlags: 0

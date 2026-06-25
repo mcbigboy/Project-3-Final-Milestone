@@ -13,9 +13,11 @@ public class PlayerShipController : MonoBehaviour
     [SerializeField] InputAction rotation = new InputAction("Rotatino");
     [SerializeField] InputAction pitchs = new InputAction("Pitchs");
     [SerializeField] InputAction yaw = new InputAction("Yaw");
-   
-
+    [SerializeField] InputAction moveCamera = new InputAction("MoveCamera");
+    
+    
     public ShipPawn pawn;
+    public FollowShip followship;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +34,13 @@ public class PlayerShipController : MonoBehaviour
         Rotation();
         Pitchs();
         Yaw();
+        MoveCamera();
+    }
+
+    private void MoveCamera()
+    {
+        float moveCameraInput = moveCamera.ReadValue<float>();
+        followship.MoveCamera(moveCameraInput);
     }
 
     private void Yaw()
@@ -73,5 +82,6 @@ public class PlayerShipController : MonoBehaviour
         backward.Enable();
         rotation.Enable();
         pitchs.Enable();
+        moveCamera.Enable(); 
     }
 }
